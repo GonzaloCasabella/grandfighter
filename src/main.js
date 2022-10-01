@@ -1,8 +1,10 @@
 import Phaser from 'phaser'
+import atributosScene from './scenes/atributos'
 import cargaScene from './scenes/carga'
 
 import HelloWorldScene from './scenes/mainmenu'
 import registroScene from './scenes/registro'
+import selecpersonajeScene from './scenes/selec personajes'
 
 const config = {
 	type: Phaser.AUTO,
@@ -27,7 +29,7 @@ const config = {
 			debug: false,
 		}
 	},
-	scene: [HelloWorldScene,registroScene,cargaScene]
+	scene: [HelloWorldScene,registroScene,cargaScene,selecpersonajeScene,atributosScene]
 }
 
 export default new Phaser.Game(config)

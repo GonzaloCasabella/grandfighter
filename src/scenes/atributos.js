@@ -15,13 +15,13 @@ import Phaser from 'phaser'
 // events.on('health-changed', this.handleHealthChanged, this)
 
 
-export default class registroScene extends Phaser.Scene
+export default class atributosScene extends Phaser.Scene
 {
     jugadores_listos=0
 
 	constructor()
 	{
-		super('registro')
+		super('atributos')
 	}
 
 	preload()
