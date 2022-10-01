@@ -24,21 +24,30 @@ export default class cargaScene extends Phaser.Scene
 		super('carga')
 	}
 
+    preload(){
+        this.load.image('cargdatos', 'assets/cargdatos.png')
+        this.load.image('loading', 'assets/loadingg.png')
+    }
+
+    
     init(data)
     {
         if(data.fondo){
             this.fondocarga=data.fondo
             
         }
+        
     }
-
-
+    
 
     create()
     {
         let contexto =this
         this.add.image(400, 300, this.fondocarga)
+        this.add.image(670, 550, 'cargdatos').setScale(1)
+        this.add.image(500, 300, 'loading').setScale(1)
         
     }
-  
+    
+    
 }

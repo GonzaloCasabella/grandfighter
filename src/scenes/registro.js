@@ -34,6 +34,8 @@ export default class registroScene extends Phaser.Scene
         this.load.image('regboton', 'assets/texturas/botones/entertext1.png')
         this.load.image('regboton2', 'assets/texturas/botones/entertext2.png')
         this.load.image('avanzar', 'assets/avanzar.png')
+        this.load.image('id1', 'assets/id1.png')
+        this.load.image('id2', 'assets/id2.png')
     }
 
     create()
@@ -54,7 +56,9 @@ export default class registroScene extends Phaser.Scene
             boton2.alpha =0.5
             this.jugadores_listos++
         },this)
-    
+
+        this.add.image(175, 255, 'id2').setScale(1)
+        this.add.image(175, 345, 'id2').setScale(1)
         this.add.image(400, 460, 'avanzar').setScale(1)
         this.add.text
         (200,230, "jugador5000", {
