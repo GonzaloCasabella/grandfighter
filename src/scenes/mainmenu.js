@@ -24,29 +24,33 @@ export default class HelloWorldScene extends Phaser.Scene
 
 	preload()
     {
-        this.load.setBaseURL('http://labs.phaser.io')
+       
 
-        this.load.image('fondo', 'assets/sprites/principal.png')
-        this.load.image('logo', 'assets/sprites/logo.png')
+        this.load.image('fondo', 'assets/principal.png')
+        this.load.image('logo', 'assets/logo.png')
+        this.load.image('boton', 'assets/texturas/botones/start_boton.png')
+        this.load.image("fondocarga1", "assets/menucarga.png")
+        
     }
 
     create()
     {
         this.add.image(400, 300, 'fondo')
 
-
-        const emitter = particles.createEmitter({
-            speed: 100,
-            scale: { start: 1, end: 0 },
-            blendMode: 'ADD'
+        const logo = this.add.image(400, 300, 'logo')
+        const boton = this.add.image(400, 500, 'boton')
+        
+        this.tweens.add({
+            targets: boton, 
+            scale: 1.2,
+            ease: "Linear",
+            duration: 500,
+            repeat: -1,
+            yoyo: true
         })
-
-        const logo = this.physics.add.image(400, 100, 'logo')
-
-        logo.setVelocity(100, 200)
-        logo.setBounce(1, 1)
-        logo.setCollideWorldBounds(true)
-
-        emitter.startFollow(logo)
+        boton.setInteractive().on("pointerup", () => {
+            this.scene.start("registro")
+        },this)
+        
     }
 }
