@@ -27,7 +27,9 @@ const config = {
 			debug: false,
 		}
 	},
-	scene: [HelloWorldScene,registroScene,cargaScene]
+	// @ts-ignore
+	scene: [HelloWorldScene,registroScene,cargaScene,selecpersonajeScene,atributoScene]
 }
 
 export default new Phaser.Game(config)
+
