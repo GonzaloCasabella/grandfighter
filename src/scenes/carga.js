@@ -27,6 +27,7 @@ export default class cargaScene extends Phaser.Scene
     preload(){
         this.load.image('cargdatos', 'assets/cargdatos.png')
         this.load.image('loading', 'assets/loadingg.png')
+        this.load.image('botonescena', 'assets/texturas/botones/cambioescena.png')
     }
 
     
@@ -46,8 +47,22 @@ export default class cargaScene extends Phaser.Scene
         this.add.image(400, 300, this.fondocarga)
         this.add.image(670, 550, 'cargdatos').setScale(1)
         this.add.image(500, 300, 'loading').setScale(1)
+        const boton = this.add.image(400, 550, 'botonescena')
+        
+        this.tweens.add({
+            targets: boton, 
+            scale: 1.2,
+            ease: "Linear",
+            duration: 500,
+            repeat: -1,
+            yoyo: true
+        })
+        boton.setInteractive().on("pointerup", () => {
+            this.scene.start("selec personajes")
+        },this)
         
     }
+        
     
     
 }
