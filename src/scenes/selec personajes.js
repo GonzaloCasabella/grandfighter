@@ -27,19 +27,19 @@ export default class selecpersonajeScene extends Phaser.Scene
 
 	preload()
     {
-        this.load.image('insignea', 'assets/logo.png'
-        his.load.image('insignea', 'assets/logoescenario'
-        his.load.image('idn1', 'assets/id1,png'
-        his.load.image('idn2', 'assets/id2.png'
-        his.load.image('versus', 'assets/texturas/vs.png'
-        his.load.image('box_player1', 'assets//texturas/boxname_personaje.png'
-        his.load.image('box_player2', 'assets/texturas/boxbane_personaje.png'
-        his.load.image('cuadroselec', 'assets/yexturas/interfazc.png'
-        his.load.image('mouseL', 'assets/yexturas/botones/mouseizquierdo.png'
-        his.load.image('mouseR', 'assets/yexturas/botones/mousederecho.png'
-        his.load.image('Enter', 'assets/yexturas/botones/enter.png'
-        his.load.image('aleatorio', 'assets/yexturas/botones/esp.png'
-        his.load.image('x', 'assets/yexturas/botones/seleccionar.png'
+        this.load.image('insignea', 'assets/logo.png')
+        this.load.image('insignea', 'assets/logoescenario')
+        this.load.image('idn1', 'assets/id1,png')
+        this.load.image('idn2', 'assets/id2.png')
+        this.load.image('versus', 'assets/texturas/vs.png')
+        this.load.image('box_player1', 'assets//texturas/boxname_personaje.png')
+        this.load.image('box_player2', 'assets/texturas/boxbane_personaje.png')
+        this.load.image('cuadroselec', 'assets/yexturas/interfazc.png')
+        this.load.image('mouseL', 'assets/yexturas/botones/mouseizquierdo.png')
+        this.load.image('mouseR', 'assets/yexturas/botones/mousederecho.png')
+        this.load.image('Enter', 'assets/yexturas/botones/enter.png')
+        this.load.image('aleatorio', 'assets/yexturas/botones/esp.png')
+        this.load.image('x', 'assets/yexturas/botones/seleccionar.png')
         
         
     }
@@ -51,7 +51,6 @@ export default class selecpersonajeScene extends Phaser.Scene
         }
         
     }
-    
     
     create()
     {
