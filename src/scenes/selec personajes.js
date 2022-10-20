@@ -27,7 +27,7 @@ export default class selecpersonajeScene extends Phaser.Scene
 
 	preload()
     {
-        this.load.image('insignea', 'assets/logo.png')
+        this.load.image('logo1', 'assets/logo.png')
         this.load.image('insignea', 'assets/logoescenario')
         this.load.image('idn1', 'assets/id1,png')
         this.load.image('idn2', 'assets/id2.png')
@@ -79,28 +79,28 @@ export default class selecpersonajeScene extends Phaser.Scene
         (190,600, "Seleccionar" , {
           fontSize: "20px",
           fontStyle: "bold",
-          color: "",
+          color: "FDFCE8",
 
         })
         this.add.text
         (625,600, "Seleccionar" , {
           fontSize: "20px",
           fontStyle: "bold",
-          color: "",
+          color: "FDFCE8",
 
         })
         this.add.text
         (370,600, "Azar" , {
           fontSize: "20px",
           fontStyle: "bold",
-          color: "",
+          color: "FDFCE8",
 
         })
         this.add.text
         (340,600, "Azar" , {
           fontSize: "20px",
           fontStyle: "bold",
-          color: "",
+          color: "FDFCE8",
 
         })
         this.add.text
@@ -114,15 +114,15 @@ export default class selecpersonajeScene extends Phaser.Scene
         (390,600, "Confirmar" , {
           fontSize: "20px",
           fontStyle: "bold",
-          color: "",
+          color: "FDFCE8",
 
         })
-    }
-        
-    update()
+
+        update()
     {
         if (this.jugadores_listos > 1) {
-            this.scene.start("atributos",{fondo:"ingame1"})   
+            this.scene.start("atributos",{fondo:"infiernogame.png"})   
         }
-      
-}    
+    }      
+       
+}  

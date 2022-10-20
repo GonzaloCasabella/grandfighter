@@ -25,7 +25,7 @@ export default class cargaScene extends Phaser.Scene
 	}
 
     preload(){
-        this.load.image('cargdatos', 'assets/cargdatos.png')
+
         this.load.image('loading', 'assets/loadingg.png')
         this.load.image('botonescena', 'assets/texturas/botones/cambioescena.png')
     }
@@ -45,10 +45,16 @@ export default class cargaScene extends Phaser.Scene
     {
         let contexto =this
         this.add.image(400, 300, this.fondocarga)
-        this.add.image(670, 550, 'cargdatos').setScale(1)
         this.add.image(500, 300, 'loading').setScale(1)
         const boton = this.add.image(400, 550, 'botonescena')
-        
+
+        this.add.text
+        (550,600, "Guardando Datos..." {
+            fontzise: "20px", 
+            fontStyle: "bold",
+            color: "#F6F4D4",
+        })
+            
         this.tweens.add({
             targets: boton, 
             scale: 1.2,
