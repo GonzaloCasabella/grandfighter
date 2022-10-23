@@ -27,102 +27,98 @@ export default class selecpersonajeScene extends Phaser.Scene
 
 	preload()
     {
+        this.load.image('fondoselec', 'assets/ingame.png')
         this.load.image('logo1', 'assets/logo.png')
-        this.load.image('insignea', 'assets/logoescenario')
-        this.load.image('idn1', 'assets/id1,png')
-        this.load.image('idn2', 'assets/id2.png')
+        this.load.image('insignea', 'assets/logoescenario.png')
+        this.load.image('idn1' ,'assets/id1.png')
+        this.load.image('idn2','assets/id2.png')
         this.load.image('versus', 'assets/texturas/vs.png')
-        this.load.image('box_player1', 'assets//texturas/boxname_personaje.png')
-        this.load.image('box_player2', 'assets/texturas/boxbane_personaje.png')
-        this.load.image('cuadroselec', 'assets/yexturas/interfazc.png')
-        this.load.image('mouseL', 'assets/yexturas/botones/mouseizquierdo.png')
-        this.load.image('mouseR', 'assets/yexturas/botones/mousederecho.png')
-        this.load.image('Enter', 'assets/yexturas/botones/enter.png')
-        this.load.image('aleatorio', 'assets/yexturas/botones/esp.png')
-        this.load.image('x', 'assets/yexturas/botones/seleccionar.png')
+        this.load.image('box_player1', 'assets/texturas/boxname_personaje.png')
+        this.load.image('box_player2', 'assets/texturas/boxname_personaje.png')
+        this.load.image('cuadroselec', 'assets/texturas/interfazc.png')
+        this.load.image('mouseL', 'assets/texturas/botones/mouseinzquierdo.png')
+        this.load.image('mouseR', 'assets/texturas/botones/mousederecho.png')
+        this.load.image('Enter', 'assets/texturas/botones/enter.png')
+        this.load.image('aleatorio', 'assets/texturas/botones/esp.png')
+        this.load.image('x', 'assets/texturas/botones/seleccionar.png')
         
         
     }
-    init(data)
-    {
-        if(data.fondo){
-            this.ingame=data.fondo
-            
-        }
-        
-    }
+    
+    
     
     create()
     {
         let contexto =this
-        this.add.image(400, 300, 'ingame1.png')
-        this.add.image(400, 130, 'insignea').setScale(1)
-        this.add.image(100, 140, 'idn1').setScale(1)
-        this.add.image(640, 140, 'idn2').setScale(1)
-        this.add.image(400, 320, 'versus').setScale(1)
-        this.add.image(370, 320, 'box_player1').setScale(1)
-        this.add.image(450, 320, 'box_player2').setScale(1)
-        this.add.image(400, 340, 'cuadroselec').setScale(1)
-            let boton3 = this.add.image(635, 600, 'mouseL').setScale(1)
-                let boton4 = this.add.image(650, 600, 'mouseR').setScale(1)
-                    let boton7 = this.add.image(400, 600, 'enter').setScale(1)
-                        let boton5 = this.add.image(370, 600, 'aleatorio').setScale(1)
-                            let boton6 = this.add.image(200, 600, 'x').setScale(1)
+        this.add.image(400, 300, 'fondoselec')
+        this.add.image(400, 35, 'insignea').setScale(0.3)
+        this.add.image(66, 38, 'idn1').setScale(1)
+        this.add.image(500, 38, 'idn2').setScale(1)
+        this.add.image(400, 150, 'versus').setScale(0.4)
+        this.add.image(280, 150, 'box_player1').setScale(0.6)
+        this.add.image(520, 150, 'box_player2').setScale(0.6)
+        this.add.image(400, 366, 'cuadroselec').setScale(1)
+            let boton3 = this.add.image(663, 560, 'mouseL').setScale(0.3)
+                let boton4 = this.add.image(760, 560, 'mouseR').setScale(0.3)
+                    let boton7 = this.add.image(460, 560, 'Enter').setScale(1)
+                        let boton5 = this.add.image(308, 560, 'aleatorio').setScale(1)
+                            let boton6 = this.add.image(140, 560, 'x').setScale(1)
         this.add.text
-        (130,140, "jugador3000", {
+        (90,20, "jugador3000", {
             fontSize:"30px",
             fontStyle: "bold",
             color: "#ffff00",
             
         })
         this.add.text
-        (190,600, "Seleccionar" , {
-          fontSize: "20px",
+        (boton6.x-128,560, "Seleccionar" , {
+          fontSize: "15px",
           fontStyle: "bold",
-          color: "FDFCE8",
+          color: "#fdfceb",
 
         })
         this.add.text
-        (625,600, "Seleccionar" , {
-          fontSize: "20px",
+        (545,560, "Seleccionar" , {
+          fontSize: "15px",
           fontStyle: "bold",
-          color: "FDFCE8",
+          color: "#FDFCE8",
 
         })
         this.add.text
-        (370,600, "Azar" , {
-          fontSize: "20px",
+        (boton5.x-130,560, "Azar" , {
+          fontSize: "15px",
           fontStyle: "bold",
-          color: "FDFCE8",
+          color: "#FDFCE8",
 
         })
         this.add.text
-        (340,600, "Azar" , {
-          fontSize: "20px",
+        (705,560, "Azar" , {
+          fontSize: "15px",
           fontStyle: "bold",
-          color: "FDFCE8",
+          color: "#FDFCE8",
 
         })
         this.add.text
-        (650,140, "jugador5000", {
-            fontSize:"40px",
+        (530,20, "jugador5000", {
+            fontSize:"30px",
             fontStyle: "bold",
             color: "#ffff00",
             
         })
         this.add.text
-        (390,600, "Confirmar" , {
-          fontSize: "20px",
+        (418,582, "Confirmar" , {
+          fontSize: "15px",
           fontStyle: "bold",
-          color: "FDFCE8",
+          color: "#FDFCE8",
 
         })
+        
+        var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
+        enter.on("up",()=>{
+            this.scene.start("atributo",{fondo:"fondoingame"})
+        })
+        
 
-        update()
-    {
-        if (this.jugadores_listos > 1) {
-            this.scene.start("atributos",{fondo:"infiernogame.png"})   
-        }
     }      
        
 }  

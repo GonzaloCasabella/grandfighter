@@ -49,10 +49,10 @@ export default class cargaScene extends Phaser.Scene
         const boton = this.add.image(400, 550, 'botonescena')
 
         this.add.text
-        (550,600, "Guardando Datos..." {
-            fontzise: "20px", 
+        (550,600, "Guardando Datos...",{
+            fontSize: "20px",
             fontStyle: "bold",
-            color: "#F6F4D4",
+            color: "#F6F4D4"
         })
             
         this.tweens.add({

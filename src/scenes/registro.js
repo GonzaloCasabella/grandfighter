@@ -30,7 +30,6 @@ export default class registroScene extends Phaser.Scene
 
         this.load.image('fondoregistro', 'assets/fondoregistro.png')
         this.load.image('pantalla', 'assets/pantalla.png')
-        this.load.image('texto', 'assets/textoregistro.png')
         this.load.image('regboton', 'assets/texturas/botones/entertext1.png')
         this.load.image('regboton2', 'assets/texturas/botones/entertext2.png')
         this.load.image('avanzar', 'assets/avanzar.png')
@@ -45,7 +44,6 @@ export default class registroScene extends Phaser.Scene
         let contexto =this
         this.add.image(400, 300, 'fondoregistro')
         this.add.image(400, 300, 'pantalla').setScale(1.5)
-        this.add.image(400, 150, 'texto').setScale(1)
         let boton1 = this.add.image(600, 250, 'regboton').setScale(1)
         boton1.setInteractive().on("pointerup", () => {
             boton1.disableInteractive()
@@ -59,11 +57,24 @@ export default class registroScene extends Phaser.Scene
             this.jugadores_listos++
         },this)
 
-        this.add.image(175, 255, 'id2').setScale(1)
+        this.add.image(175, 255, 'id1').setScale(1)
         this.add.image(175, 345, 'id2').setScale(1)
         this.add.image(500, 250, 'basura').setScale(1)
         this.add.image(500, 340, 'basura2').setScale(1)
         this.add.image(400, 460, 'avanzar').setScale(1)
+
+        this.add.text
+        (240,120, "Registre usuarios", {
+        fontSize: "30px",
+        fontStyle: "bold",
+        color: "#ffff00"})
+
+        this.add.text
+        (305,160, "(Min 2 jugadores)", {
+        fontSize: "20px",
+        fontStyle: "bold",
+        color: "#ffff00"})
+    
         this.add.text
         (200,230, "jugador5000", {
             fontSize:"40px",
@@ -78,7 +89,7 @@ export default class registroScene extends Phaser.Scene
             color: "#ffff00",
             
         })
-    }
+    } 
     update()
     {
         if (this.jugadores_listos > 1) {

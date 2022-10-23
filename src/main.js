@@ -1,8 +1,9 @@
 import Phaser from 'phaser'
-import atributosScene from './scenes/atributos'
+import atributoScene from './scenes/atributo'
 import cargaScene from './scenes/carga'
 
 import HelloWorldScene from './scenes/mainmenu'
+import mapaScene from './scenes/mapa'
 import registroScene from './scenes/registro'
 import selecpersonajeScene from './scenes/selec personajes'
 
@@ -29,12 +30,7 @@ const config = {
 			debug: false,
 		}
 	},
-<<<<<<< HEAD
-	scene: [HelloWorldScene,registroScene,cargaScene,selecpersonajeScene,atributosScene]
-=======
-	// @ts-ignore
-	scene: [HelloWorldScene,registroScene,cargaScene,selecpersonajeScene,atributoScene]
->>>>>>> 07a079b2af2dd3f7624cadc0a804b12e26b8bce8
+	scene: [HelloWorldScene,registroScene,cargaScene,selecpersonajeScene,atributoScene,mapaScene]
 }
 
 export default new Phaser.Game(config)
