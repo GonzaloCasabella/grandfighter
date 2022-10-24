@@ -1,18 +1,15 @@
 import Phaser from 'phaser'
 
 
-// Manejador de eventos centralizados para comunicacion de componentes
+// Recordatorio:
 
-// Importacion
-//import { sharedInstance as events } from './EventCenter'
-
-// Emisor de mensaje de difusion
-// Recibe el nombre del mensaje y los valores de parametro
-// events.emit('health-changed', this.health)
-
-// Receptor de mensaje, por ejemplo escena de UI
-// Recibe el nombre del mensaje y una funcion callback a ejecutar
-// events.on('health-changed', this.handleHealthChanged, this)
+// precargar e implementar el boton para seleccionar el tiempo de los combates.
+//Acomdar textos.
+// funcionalidad de los botones de "map siguiente y map anterior".
+//crear escena game
+ // boton "Enter" para ir a escenas de game.
+// escena de precarga de game.
+// implementar audio y fx
 
 
 export default class mapaScene extends Phaser.Scene
