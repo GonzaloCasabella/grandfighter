@@ -1,22 +1,22 @@
 import Phaser from 'phaser'
 
 
-// implementar el "Loading"
+// implementar el listado de idiomas
 //implementar audio y fx
 
 
-export default class precargagameScene extends Phaser.Scene
+export default class selecidiomaScene extends Phaser.Scene
 {
 
 	constructor()
 	{
-		super('precarga')
+		super('idioma')
 	}
 
     preload(){
 
-        this.load.image('loading', 'assets/loadingg.png')
-        this.load.image('pantallacarga', 'assets/mapa/pantallanegra.png')
+        this.load.image('fondoidioma', 'assets/fondoregistro.png')
+        this.load.image('caja', 'assets/pantalla.png')
     }
 
         

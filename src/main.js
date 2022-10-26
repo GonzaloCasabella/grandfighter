@@ -8,6 +8,8 @@ import registroScene from './scenes/registro'
 import selecpersonajeScene from './scenes/selec personajes'
 import precargagameScene from './scenes/precargagame'
 import gameScene from './scenes/game'
+import selecidiomaScene from './scenes/selecidioma'
+import creditosScene from './scenes/creditos'
 
 
 const config = {
@@ -33,7 +35,7 @@ const config = {
 			debug: false,
 		}
 	},
-	scene: [HelloWorldScene,registroScene,cargaScene,selecpersonajeScene,atributoScene,mapaScene,precargagameScene,gameScene]
+	scene: [HelloWorldScene,registroScene,cargaScene,selecpersonajeScene,atributoScene,mapaScene,precargagameScene,gameScene,selecidiomaScene,creditosScene]
 }
 
 export default new Phaser.Game(config)

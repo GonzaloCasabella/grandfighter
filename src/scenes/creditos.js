@@ -1,15 +1,17 @@
 import Phaser from 'phaser'
 
 
-// implementar todo menu, menos el fondo
+// implementar textos
+//implementar boton de reinicio
+//implementar audio y fx
 
 
-export default class gameScene extends Phaser.Scene
+export default class creditosScene extends Phaser.Scene
 {
 
 	constructor()
 	{
-		super('game')
+		super('creditos')
 	}
 
     preload(){
