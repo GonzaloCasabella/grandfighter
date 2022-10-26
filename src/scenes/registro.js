@@ -1,8 +1,10 @@
 import Phaser from 'phaser'
 
 
+
+
 // implementar audio y fx
-// que el registro de usuariofuncione
+// que el registro de usuario funcione
 
 
 export default class registroScene extends Phaser.Scene

@@ -2,7 +2,7 @@ import Phaser from 'phaser'
 
 
 // Funcionalidad de:
-// Botones (s y mouse izquierdo) para seleccionarle la habilidad al personaje
+// Botones (X y mouse izquierdo) para seleccionarle la habilidad al personaje
 // interfaz de personajes
 //Implementar audio y fx
 

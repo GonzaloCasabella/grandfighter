@@ -6,6 +6,9 @@ import HelloWorldScene from './scenes/mainmenu'
 import mapaScene from './scenes/mapa'
 import registroScene from './scenes/registro'
 import selecpersonajeScene from './scenes/selec personajes'
+import precargagameScene from './scenes/precargagame'
+import gameScene from './scenes/game'
+
 
 const config = {
 	type: Phaser.AUTO,
@@ -30,7 +33,7 @@ const config = {
 			debug: false,
 		}
 	},
-	scene: [HelloWorldScene,registroScene,cargaScene,selecpersonajeScene,atributoScene,mapaScene]
+	scene: [HelloWorldScene,registroScene,cargaScene,selecpersonajeScene,atributoScene,mapaScene,precargagameScene,gameScene]
 }
 
 export default new Phaser.Game(config)
