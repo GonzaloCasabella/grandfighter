@@ -16,7 +16,7 @@ export default class creditosScene extends Phaser.Scene
 
     preload(){
 
-        this.load.image('mapagame', 'assets//mapa/patiotemplogame.png')
+        this.load.image('creditosmenu', 'assets//mapa/fondoregistro.png')
     }
 
         
@@ -26,7 +26,7 @@ export default class creditosScene extends Phaser.Scene
     create()
     {
         let contexto =this
-        this.add.image(400, 300, 'mapagame' )
+        this.add.image(400, 300, 'creditosmenu' )
         
 
             

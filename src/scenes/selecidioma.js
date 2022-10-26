@@ -26,9 +26,9 @@ export default class selecidiomaScene extends Phaser.Scene
     create()
     {
         let contexto =this
-        this.add.image(400, 300, this.fondocarga)
-        this.add.image(500, 300, 'loading').setScale(1)
-        const boton = this.add.image(400, 550, 'botonescena')
+        this.add.image(400, 300, 'fondoidioma')
+        this.add.image(400, 300, 'caja').setScale(1.5)
+        
 
         this.add.text
         (700,560, "cargando...",{
