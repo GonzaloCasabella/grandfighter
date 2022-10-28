@@ -4,11 +4,8 @@ import Phaser from 'phaser'
 // Recordatorio:
 
 // precargar e implementar el boton para seleccionar el tiempo de los combates.
-//Acomdar textos.
 // funcionalidad de los botones de "map siguiente y map anterior".
-//crear escena game
  // boton "Enter" para ir a escenas de game.
-// escena de precarga de game.
 // implementar audio y fx
 
 
@@ -49,7 +46,7 @@ export default class mapaScene extends Phaser.Scene
         this.add.image(400, 35, 'sellopelea').setScale(0.3)
         this.add.image(66, 38, 'user').setScale(1)
         this.add.image(500, 38, 'user2').setScale(1)
-            let buttonplay = this.add.image(450,560, 'botonjugar' ).setScale(1)
+            let buttonplay = this.add.image(445,560, 'botonjugar' ).setScale(1)
                     let buttonmap = this.add.image(500,210, 'map siguiente' ).setScale(1)
                         let buttonmap2 = this.add.image(300,210, 'map anterior' ).setScale(1)
                         let buttontime = this.add.image(650,210, 'selec timer' ).setScale(1)
@@ -60,32 +57,19 @@ export default class mapaScene extends Phaser.Scene
         (371,200, "MAPA", {
         fontSize: "25px",
         fontStyle: "bold",
-        color: "F8F52E"
+        color: "#F8F52E"
     
     })
     this.add.text
-        (555,203, "TIEMPO", {
+        (540,200, "TIEMPO", {
         fontSize: "25px",
         fontStyle: "bold",
         color: "#F8F52E"
     
     })
-    this.add.text
-    (190,600, "Seleccionar", {
-    fontSize: "50px",
-    fontStyle: "bold",
-    color: "#F8F52E"
-
-})
-this.add.text
-        (625,600, "Seleccionar", {
-        fontSize: "20px",
-        fontStyle: "bold",
-        color: "#FDFCE8"
     
-    })
     this.add.text
-        (390,440, "Confirmar", {
+        (365,562, "Fight", {
         fontSize: "20px",
         fontStyle: "bold",
         color: "#FDFCE8" 

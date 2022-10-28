@@ -1,7 +1,7 @@
 import Phaser from 'phaser'
 
 
-// implementar todo menu, menos el fondo
+ // hacer todo
 
 
 export default class gameScene extends Phaser.Scene
@@ -13,25 +13,25 @@ export default class gameScene extends Phaser.Scene
 	}
 
     preload(){
-
-        this.load.image('mapagame', 'assets//mapa/patiotemplogame.png')
+        
+        
+        this.load.image('fondomapa', 'assets/mapa/pantallanegra.png')
+        this.load.audio('pantallaoscura2', 'assets/sonido/sonido menu/transiccion.mp3')
     }
 
-        
-
-    
 
     create()
     {
         let contexto =this
-        this.add.image(400, 300, 'mapagame' )
-        
+        this.add.image(400, 300,'pantallanefra')
+        this.add.image(560, 700, 'loadingg').setScale(0.6)
+                        
 
-            
 
         
+   
+   
     }
-        
     
-    
-}
+} 
+       

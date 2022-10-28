@@ -1,8 +1,8 @@
 import Phaser from 'phaser'
 
 
-// implementar el "Loading"
-//implementar audio y fx
+ // precarga automatica aescena game.
+// implementar audio y fx
 
 
 export default class precargagameScene extends Phaser.Scene
@@ -14,32 +14,26 @@ export default class precargagameScene extends Phaser.Scene
 	}
 
     preload(){
-
-        this.load.image('loading', 'assets/loadingg.png')
-        this.load.image('pantallacarga', 'assets/mapa/pantallanegra.png')
+        
+        
+        this.load.image('fondomapa', 'assets/mapa/pantallanegra.png')
+        this.load.image('loadingprecarga', 'assets/loadingg.png')
+        this.load.audio('pantallaoscura2', 'assets/sonido/sonido menu/transiccion.mp3')
     }
 
-        
-
-    
 
     create()
     {
         let contexto =this
-        this.add.image(400, 300, 'pantallacarga')
-        
+        this.add.image(400, 300,'pantallanefra')
+        this.add.image(560, 700, 'loadingg').setScale(0.6)
+                        
 
-        this.add.text
-        (700,560, "cargando...",{
-            fontSize: "15px",
-            fontStyle: "bold",
-            color: "#F6F4D4"
-        })
-            
 
         
+   
+   
     }
-        
     
-    
-}
+} 
+       

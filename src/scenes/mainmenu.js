@@ -19,15 +19,19 @@ export default class HelloWorldScene extends Phaser.Scene
         this.load.image('logo', 'assets/logo.png')
         this.load.image('boton', 'assets/texturas/botones/start_boton.png')
         this.load.image("fondocarga1", "assets/menucarga.png")
-        
+        this.load.audio("soundtrack", "assets/sonido/sonido menu/soundtrack.mp3")
+        this.load.audio("soundtrack", "assets/sonido/sonido menu/soundbutton.mp3")
     }
 
     create()
     {
         this.add.image(400, 300, 'fondo')
+        this.backgroundMusic = this.sound.add('soundtrack')
+        this.backgroundMusic.play();
 
         const logo = this.add.image(400, 300, 'logo')
         const boton = this.add.image(400, 500, 'boton')
+    
         
         this.tweens.add({
             targets: boton, 

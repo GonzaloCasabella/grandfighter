@@ -17,7 +17,7 @@ export default class selecidiomaScene extends Phaser.Scene
 
         this.load.image('fondoidioma', 'assets/fondoregistro.png')
         this.load.image('buttontext', 'assets/texturas/botones/entertext1.png')
-
+        this.load.image('caja', 'assets/pantalla.png')
     }
 
         
@@ -26,11 +26,12 @@ export default class selecidiomaScene extends Phaser.Scene
 
     create()
     {
+        console.log("idiomas")
         let contexto =this
         this.add.image(400, 300, 'fondoidioma')
         this.add.image(400, 300, 'caja').setScale(1.5)
          this.load.image('caja', 'assets/pantalla.png')
-            let botontext = this.add.image(400, 460, 'botontext').setScale(1)
+            let botontext = this.add.image(400, 460, 'buttontext').setScale(1)
 
         this.add.text
         (238,120, "seleccione idioma",{
@@ -57,6 +58,9 @@ export default class selecidiomaScene extends Phaser.Scene
             color: "#F6F4D4"
         })
             
+        botontext.setInteractive().on("pointerup", () => {
+            this.scene.start("selec personajes")
+        },this)
 
         
     }

@@ -85,7 +85,7 @@ export default class registroScene extends Phaser.Scene
     update()
     {
         if (this.jugadores_listos > 1) {
-            this.scene.start("selecidioma",{fondo:"fondoregistro"})   
+            this.scene.start("idioma",{fondo:"fondoregistro"})   
         }
     }
 }
