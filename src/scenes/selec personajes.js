@@ -33,6 +33,7 @@ export default class selecpersonajeScene extends Phaser.Scene
         this.load.image('Enter', 'assets/texturas/botones/enter.png')
         this.load.image('aleatorio', 'assets/texturas/botones/esp.png')
         this.load.image('x', 'assets/texturas/botones/seleccionar.png')
+        this.load.image('cuadro A', 'assets/texturas/interfazS.png')
         
         
     }
@@ -49,12 +50,13 @@ export default class selecpersonajeScene extends Phaser.Scene
         this.add.image(400, 150, 'versus').setScale(0.4)
         this.add.image(280, 150, 'box_player1').setScale(0.6)
         this.add.image(520, 150, 'box_player2').setScale(0.6)
-        this.add.image(400, 366, 'cuadroselec').setScale(1)
+        let interfaz = this.add.image(400, 366, 'cuadroselec').setScale(1)
             let boton3 = this.add.image(663, 560, 'mouseL').setScale(0.3)
                 let boton4 = this.add.image(760, 560, 'mouseR').setScale(0.3)
                     let boton7 = this.add.image(460, 560, 'Enter').setScale(1)
                         let boton5 = this.add.image(308, 560, 'aleatorio').setScale(1)
                             let boton6 = this.add.image(140, 560, 'x').setScale(1)
+                            let visual = this.add.image(66, 38, 'cuadro A').setScale(1).setOrigin(0)
         this.add.text
         (90,20, "jugador3000", {
             fontSize:"30px",
@@ -104,6 +106,8 @@ export default class selecpersonajeScene extends Phaser.Scene
           color: "#FDFCE8",
 
         })
+        visual.x = interfaz.x-108.5
+        visual.y = interfaz.y-164.5
         
         var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
         enter.on("up",()=>{

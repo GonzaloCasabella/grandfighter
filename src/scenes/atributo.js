@@ -34,7 +34,7 @@ export default class atributoScene extends Phaser.Scene
         this.load.image('poderp1', 'assets/poderes/fuego ifz.png')
         this.load.image('poderp2', 'assets/poderes/magia ifz.png')
         this.load.image('poderp3', 'assets/poderes/viento ifz.png')
-        
+        this.load.image('circle A', 'assets/texturas/circulo amarillo.png')
     }
 
     create()
@@ -50,12 +50,14 @@ export default class atributoScene extends Phaser.Scene
         this.add.image(400, 35, 'sello2').setScale(0.3)
         this.add.image(66, 38, 'iden').setScale(1)
         this.add.image(500, 35, 'iden2').setScale(1)
-        this.add.image(285, 300, 'poder1').setScale(0.7)
-        this.add.image(385, 300, 'poder2').setScale(0.7)
-        this.add.image(490, 300, 'poder3').setScale(0.7)
-        this.add.image(285, 400, 'poderp2').setScale(0.7)
-        this.add.image(385, 400, 'poderp2').setScale(0.7)
-        this.add.image(490, 400, 'poderp3').setScale(0.7)
+            let circle = this.add.image(285, 300, 'poder1').setScale(0.7)
+                let circle2 =this.add.image(385, 300, 'poder2').setScale(0.7)
+                    let circle3 =this.add.image(490, 300, 'poder3').setScale(0.7)
+                        let circle4 =this.add.image(285, 400, 'poderp2').setScale(0.7)
+                            let circle5 =this.add.image(385, 400, 'poderp2').setScale(0.7)
+                                let circle6 =this.add.image(490, 400, 'poderp3').setScale(0.7)
+                                    let visual2 =this.add.image(490, 400, 'circle A').setScale(0.7)
+                                    let visual3 =this.add.image(490, 400, 'circle A').setScale(0.7)
 
         this.add.text
         (90,20, "jugador3000", {
@@ -100,6 +102,11 @@ this.add.text
         color: "#FDFCE8" 
     
     })
+    visual2.x = circle.x
+    visual2.y = circle.y
+    visual3.x = circle6.x
+    visual3.y = circle6.y
+
     var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
         enter.on("up",()=>{
             this.scene.start("mapa",{fondo:"infiernogame"})

@@ -16,8 +16,10 @@ export default class selecidiomaScene extends Phaser.Scene
     preload(){
 
         this.load.image('fondoidioma', 'assets/fondoregistro.png')
-        this.load.image('buttontext', 'assets/texturas/botones/entertext1.png')
         this.load.image('caja', 'assets/pantalla.png')
+        this.load.image('español', 'assets/banderamex.png')
+        this.load.image('ingles', 'assets/england1.png')
+        this.load.image('italiano', 'assets/banderaITA.png')
     }
 
         
@@ -31,7 +33,9 @@ export default class selecidiomaScene extends Phaser.Scene
         this.add.image(400, 300, 'fondoidioma')
         this.add.image(400, 300, 'caja').setScale(1.5)
          this.load.image('caja', 'assets/pantalla.png')
-            let botontext = this.add.image(400, 460, 'buttontext').setScale(1)
+            let botonmex = this.add.image(300, 250, 'español').setScale(0.4)
+            let botoneng = this.add.image(500, 250, 'ingles').setScale(0.4)
+            let botonita = this.add.image(400, 370, 'italiano').setScale(0.4)
 
         this.add.text
         (238,120, "seleccione idioma",{
@@ -39,28 +43,20 @@ export default class selecidiomaScene extends Phaser.Scene
             fontStyle: "bold",
             color: "#F6F4D4"
         })
-        this.add.text
-        (238,135, "Español neutro",{
-            fontSize: "15px",
-            fontStyle: "bold",
-            color: "#F6F4D4"
-        })
-        this.add.text
-        (238,145, "Ingles (Usa)",{
-            fontSize: "15px",
-            fontStyle: "bold",
-            color: "#F6F4D4"
-        })
-        this.add.text
-        (238,160, "Italiano",{
-            fontSize: "15px",
-            fontStyle: "bold",
-            color: "#F6F4D4"
-        })
+        
             
-        botontext.setInteractive().on("pointerup", () => {
+        botonmex.setInteractive().on("pointerup", () => {
             this.scene.start("selec personajes")
         },this)
+
+        botoneng.setInteractive().on("pointerup", () => {
+            this.scene.start("selec personajes")
+        },this)
+
+        botonita.setInteractive().on("pointerup", () => {
+            this.scene.start("selec personajes")
+        },this)
+
 
         
     }
