@@ -81,6 +81,19 @@ export default class atributoScene extends Phaser.Scene
     
     })
     this.add.text
+        (245,143, "Wolf-man", {
+          fontSize:"15px",
+            fontStyle: "bold",
+            color: "#220557",
+          })
+          this.add.text
+        (490,143, "Wolf-man", {
+          fontSize:"15px",
+            fontStyle: "bold",
+            color: "#220557",
+          })
+
+    this.add.text
     (100,578, "Seleccionar", {
     fontSize: "15px",
     fontStyle: "bold",

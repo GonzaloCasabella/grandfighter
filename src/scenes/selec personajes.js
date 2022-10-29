@@ -34,6 +34,8 @@ export default class selecpersonajeScene extends Phaser.Scene
         this.load.image('aleatorio', 'assets/texturas/botones/esp.png')
         this.load.image('x', 'assets/texturas/botones/seleccionar.png')
         this.load.image('cuadro A', 'assets/texturas/interfazS.png')
+        this.load.image('hl1', 'assets/personajes/hombrelobo.png')
+        this.load.image('hl2', 'assets/personajes/hombreloboP2.png')
         
         
     }
@@ -50,6 +52,8 @@ export default class selecpersonajeScene extends Phaser.Scene
         this.add.image(400, 150, 'versus').setScale(0.4)
         this.add.image(280, 150, 'box_player1').setScale(0.6)
         this.add.image(520, 150, 'box_player2').setScale(0.6)
+        this.add.image(350, 260, 'hl1').setScale(0.8)
+        this.add.image(450, 260, 'hl2').setScale(0.8)
         let interfaz = this.add.image(400, 366, 'cuadroselec').setScale(1)
             let boton3 = this.add.image(663, 560, 'mouseL').setScale(0.3)
                 let boton4 = this.add.image(760, 560, 'mouseR').setScale(0.3)
@@ -64,6 +68,19 @@ export default class selecpersonajeScene extends Phaser.Scene
             color: "#ffff00",
             
         })
+        this.add.text
+        (245,143, "Wolf-man", {
+          fontSize:"15px",
+            fontStyle: "bold",
+            color: "#220557",
+          })
+          this.add.text
+        (490,143, "Wolf-man", {
+          fontSize:"15px",
+            fontStyle: "bold",
+            color: "#220557",
+          })
+
         this.add.text
         (boton6.x-128,560, "Seleccionar" , {
           fontSize: "15px",

@@ -50,9 +50,17 @@ export default class mapaScene extends Phaser.Scene
                     let buttonmap = this.add.image(500,210, 'map siguiente' ).setScale(1)
                         let buttonmap2 = this.add.image(300,210, 'map anterior' ).setScale(1)
                         let buttontime = this.add.image(650,210, 'selec timer' ).setScale(1)
-                        
-
-
+                        buttontime.setInteractive().on("pointerup", () => {
+                            
+                        },this)
+        this.add.text
+        (530,20, "jugador5000", {
+            fontSize:"30px",
+            fontStyle: "bold",
+            color: "#ffff00",
+            
+        })
+        
         this.add.text
         (371,200, "MAPA", {
         fontSize: "25px",
@@ -67,7 +75,19 @@ export default class mapaScene extends Phaser.Scene
         color: "#F8F52E"
     
     })
-    
+    this.add.text
+        (245,143, "Wolf-man", {
+          fontSize:"15px",
+            fontStyle: "bold",
+            color: "#220557",
+          })
+          this.add.text
+        (490,143, "Wolf-man", {
+          fontSize:"15px",
+            fontStyle: "bold",
+            color: "#220557",
+          })
+          
     this.add.text
         (365,562, "Fight", {
         fontSize: "20px",
@@ -75,6 +95,7 @@ export default class mapaScene extends Phaser.Scene
         color: "#FDFCE8" 
         
     
+
     })}
    
    

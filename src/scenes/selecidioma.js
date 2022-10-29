@@ -38,8 +38,8 @@ export default class selecidiomaScene extends Phaser.Scene
             let botonita = this.add.image(400, 370, 'italiano').setScale(0.4)
 
         this.add.text
-        (238,120, "seleccione idioma",{
-            fontSize: "20px",
+        (260,135, "seleccione idioma",{
+            fontSize: "25px",
             fontStyle: "bold",
             color: "#F6F4D4"
         })
