@@ -20,7 +20,8 @@ export default class mapaScene extends Phaser.Scene
     preload(){
         
         
-        this.load.image('fondomapa', 'assets/mapa/infiernogame.png')
+        this.load.image('fondomapa', 'assets/mapa/templogame.png')
+        this.load.audio('templosound', 'assets/sonido/ambiente/cueva.mp3')
         this.load.image('botonjugar', 'assets/texturas/botones/enter.png')
         this.load.image('boxname', 'assets/texturas/boxname_personaje.png')
         this.load.image('boxname2', 'assets/texturas/boxname_personaje.png')
@@ -32,6 +33,7 @@ export default class mapaScene extends Phaser.Scene
         this.load.image('map siguiente', 'assets/texturas/botones/derecha.png')
         this.load.image('map anterior', 'assets/texturas/botones/izquierda.png')
         this.load.image('box_timer', 'assets/texturas/boxtimer.png')
+        this.load.audio('fxmapsound', 'assets/sonido/sonido menu/selecmap.mp3')
 
     }
 
