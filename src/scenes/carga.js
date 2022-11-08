@@ -19,6 +19,7 @@ export default class cargaScene extends Phaser.Scene
 
         this.load.image('loading', 'assets/loadingg.png')
         this.load.image('botonescena', 'assets/texturas/botones/cambioescena.png')
+        this.load.audio('backgroundcarga', 'assets/sonido/cinematic pelea3.mp3')
     }
 
     
@@ -37,10 +38,12 @@ export default class cargaScene extends Phaser.Scene
         let contexto =this
         this.add.image(400, 300, this.fondocarga)
         this.add.image(500, 300, 'loading').setScale(1)
-        const boton = this.add.image(400, 550, 'botonescena')
+        this.backgroundcarga = this.sound.add('backgroundcarga')
+        this.backgroundcarga.play();
+        const boton = this.add.image(350, 555, 'botonescena')
 
         this.add.text
-        (550,600, "Guardando Datos...",{
+        (553,560, "Optimizando...",{
             fontSize: "20px",
             fontStyle: "bold",
             color: "#F6F4D4"
@@ -55,6 +58,7 @@ export default class cargaScene extends Phaser.Scene
             yoyo: true
         })
         boton.setInteractive().on("pointerup", () => {
+            this.backgroundcarga.stop()
             this.scene.start("selec personajes")
         },this)
         

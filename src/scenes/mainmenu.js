@@ -20,7 +20,7 @@ export default class HelloWorldScene extends Phaser.Scene
         this.load.image('boton', 'assets/texturas/botones/start_boton.png')
         this.load.image("fondocarga1", "assets/menucarga.png")
         this.load.audio("soundtrack", "assets/sonido/sonido menu/soundtrack.mp3")
-        this.load.audio("soundtrack", "assets/sonido/sonido menu/soundbutton.mp3")
+        this.load.audio("soundbutton", "assets/sonido/sonido menu/soundbutton.mp3")
     }
 
     create()
@@ -28,6 +28,7 @@ export default class HelloWorldScene extends Phaser.Scene
         this.add.image(400, 300, 'fondo')
         this.backgroundMusic = this.sound.add('soundtrack')
         this.backgroundMusic.play();
+        this.soundbutton = this.sound.add('soundbutton')
 
         const logo = this.add.image(400, 300, 'logo')
         const boton = this.add.image(400, 500, 'boton')
@@ -42,7 +43,9 @@ export default class HelloWorldScene extends Phaser.Scene
             yoyo: true
         })
         boton.setInteractive().on("pointerup", () => {
-            this.scene.start("registro")
+            this.soundbutton.play()
+            this.backgroundMusic.stop()
+            this.scene.start("idioma")
         },this)
         
     }
