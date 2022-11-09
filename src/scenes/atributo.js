@@ -17,6 +17,10 @@ export default class atributoScene extends Phaser.Scene
 		super('atributo')
 	}
 
+    init(data){
+        this.musica = data.music
+    }
+
     preload(){
         this.load.image('fatributo', 'assets/ingame.png')
         this.load.image('confirmar', 'assets/texturas/botones/enter.png')
@@ -122,7 +126,8 @@ this.add.text
 
     var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
         enter.on("up",()=>{
-            this.scene.start("mapa",{fondo:"infiernogame"})
+           this.scene.start("mapa")
+           this.musica.stop()
         })
     }
     

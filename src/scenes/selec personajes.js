@@ -38,10 +38,10 @@ export default class selecpersonajeScene extends Phaser.Scene {
     this.load.image('cuadro A', 'assets/texturas/interfazS.png')
     this.load.image('hl1', 'assets/personajes/hombrelobo.png')
     this.load.image('hl2', 'assets/personajes/hombreloboP2.png')
-    this.load.audio('soundtrack2', 'assets/sonido/sonido menu/soundtrack.mp3')
-    this.load.audio('fxsound', 'assets/sonido/sonido menu/soundbutton')
-    this.load.audio('fxsound2', 'assets/sonido/sonido menu/playeraleatorio')
-    this.load.audio('fxsound3', 'assets/sonido/sonido menu/roadtogameplay')
+ 
+    this.load.audio('fxsound', 'assets/sonido/sonido menu/soundbutton.mp3')
+    this.load.audio('fxsound2', 'assets/sonido/sonido menu/playeraleatorio.mp3')
+    this.load.audio('fxsound3', 'assets/sonido/sonido menu/roadtogameplay.mp3')
 
 
 
@@ -68,6 +68,11 @@ export default class selecpersonajeScene extends Phaser.Scene {
     let boton6 = this.add.image(140, 560, 'x').setScale(1)
     this.visual = this.add.image(66, 38, 'cuadro A').setScale(1).setOrigin(0)
     this.visual2 = this.add.image(66, 38, 'cuadro A').setScale(1).setOrigin(0)
+    this.soundtrack2 = this.sound.add("soundtrack")
+    this.soundtrack2.play()
+    this.fxsound = this.sound.add("fxsound")
+    this.fxsound2 = this.sound.add("fxsound2")
+    this.fxsound3 = this.sound.add("fxsound3")
     this.player2 = 0
     this.input.keyboard.on("keydown-W", function (e) {
     this.player1 = Math.abs((this.player1 + 1)%3)
@@ -153,7 +158,7 @@ export default class selecpersonajeScene extends Phaser.Scene {
     var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
     enter.on("up", () => {
       this.fxsound3.play()
-      this.scene.start("atributo", { fondo: "fondoingame" })
+      this.scene.start("atributo", { fondo: "fondoingame",music:this.soundtrack2 })
     })
 
     this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP)
@@ -169,21 +174,23 @@ export default class selecpersonajeScene extends Phaser.Scene {
         this.player2 = ((this.player2 - 1)%3)
       }
     })
+    var x = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.X)
+    x.on("up", () => {
+      this.fxsound.play()}
+    )
+
+    var space = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE)
+    space.on("up", () => {
+      this.fxsound2.play()}
+    )
   }
+
   update(){
     this.visual.y = this.interfaz.y - (164.5-(108*this.player1))
     this.visual2.y = this.interfaz.y - (164.5-(108*this.player2))
   }
 
-  var x = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.X)
-    x.on("up", () => {
-      this.fxsound.play()}
-    }",")
-
-    var SPACE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE)
-    space.on("up", () => {
-      this.fxsound2.play()}
-    }",")
+  
 
 
 

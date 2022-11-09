@@ -1,21 +1,19 @@
 import Phaser from 'phaser'
 
 
- // precarga automatica aescena game.
+// precarga automatica aescena game.
 
 
 
-export default class precargagameScene extends Phaser.Scene
-{
-buttontransicion
-	constructor()
-	{
-		super('precarga')
-	}
+export default class precargagameScene extends Phaser.Scene {
+    buttontransicion
+    constructor() {
+        super('precarga')
+    }
 
-    preload(){
+    preload() {
 
-        
+
         this.load.image('fondomapa', 'assets/mapa/pantallanegra.png')
         this.load.image('loadingprecarga', 'assets/loadingg.png')
         this.load.image('buttontransicion', 'assets/texturas/botones/cambioescena.png')
@@ -23,23 +21,22 @@ buttontransicion
     }
 
 
-    create()
-    {
-        let contexto =this
-        this.add.image(400, 300,'fondomapa')
-        this.add.image(560, 555, 'loadingprecarga').setScale(0.6)                
-        this.transicionsound = this.sound.add('transicionmusic')
+    create() {
+        let contexto = this
+        this.add.image(400, 300, 'fondomapa')
+        this.add.image(560, 555, 'loadingprecarga').setScale(0.6)
+        this.transicionmusic = this.sound.add('transicionmusic')
         const buttontransicion = this.add.image(350, 555, 'buttontransicion')
-   
-    
 
-    buttontransicion.setInteractive().on("pointerup", () => {
-        this.transicionmusic.play()
-        this.scene.start("game")
-    },this)
-    
-    
-    
-    
+
+
+        
+        setTimeout(() => {
+            this.transicionmusic.play()
+            this.scene.start("game")
+        }, 5000);
+    }
+
+
 }
-       
+
