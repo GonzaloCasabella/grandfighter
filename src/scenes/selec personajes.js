@@ -158,7 +158,7 @@ export default class selecpersonajeScene extends Phaser.Scene {
     var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
     enter.on("up", () => {
       this.fxsound3.play()
-      this.scene.start("atributo", { fondo: "fondoingame",music:this.soundtrack2 })
+      this.scene.start("mapa", { fondo: "fondoingame",music:this.soundtrack2,seleccion:{p1:this.player1,p2:this.player2} })
     })
 
     this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP)

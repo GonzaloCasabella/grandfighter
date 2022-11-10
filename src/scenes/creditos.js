@@ -17,6 +17,7 @@ export default class creditosScene extends Phaser.Scene
     preload(){
 
         this.load.image('creditosmenu', 'assets//mapa/fondoregistro.png')
+        this.load.audio('soundcreditos', 'assets/sonido/sonido menu/finish.mp3')
     }
 
         
@@ -27,6 +28,7 @@ export default class creditosScene extends Phaser.Scene
     {
         let contexto =this
         this.add.image(400, 300, 'creditosmenu' )
+        this.soundcreditos = this.sound.add('soundcreditos') 
         
 
             

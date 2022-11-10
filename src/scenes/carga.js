@@ -18,7 +18,7 @@ export default class cargaScene extends Phaser.Scene
     preload(){
 
         this.load.spritesheet('loading', 'assets/loadingg.png',{frameWidth:109,frameHeight:107})
-        this.load.image('botonescena', 'assets/texturas/botones/cambioescena.png')
+        
         this.load.audio('backgroundcarga', 'assets/sonido/cinematic pelea3.mp3')
     }
 
@@ -40,7 +40,7 @@ export default class cargaScene extends Phaser.Scene
         this.add.image(480, 300, 'loading').setScale(1)
         this.backgroundcarga = this.sound.add('backgroundcarga')
         this.backgroundcarga.play();
-        const boton = this.add.image(350, 555, 'botonescena')
+        
 
         this.add.text
         (553,560, "Optimizando...",{
@@ -58,8 +58,9 @@ export default class cargaScene extends Phaser.Scene
             yoyo: true
         })
         
-      
+        
         setTimeout(() => {
+            this.backgroundcarga.stop()
             this.scene.start("selec personajes")
         }, 5000); 
     }

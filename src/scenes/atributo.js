@@ -126,9 +126,12 @@ this.add.text
 
     var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
         enter.on("up",()=>{
-           this.scene.start("mapa")
-           this.musica.stop()
-        })
+            this.musica.stop()
+            console.log (this.musica)
+            this.scene.start("mapa")
+           
+
+        },this)
     }
     
     
