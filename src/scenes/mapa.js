@@ -34,13 +34,10 @@ export default class mapaScene extends Phaser.Scene {
         this.load.image('map anterior', 'assets/texturas/botones/izquierda.png')
         this.load.image('box_timer', 'assets/texturas/boxtimer.png')
         this.load.audio('fxmapsound', 'assets/sonido/sonido menu/selemap.mp3')
-        this.load.audio('fxmap1', 'assets/sonido/ambiente/epicstorm.mp3')
-        this.load.audio('fxmap2', 'assets/sonido/ambiente/cueva.mp3')
-        this.load.audio('fxmap3', 'assets/sonido/bajocero.mp3')
-
-       
+        this.load.audio('ambient1', 'assets/sonido/ambiente/epicstorm.mp3')
+        this.load.audio('ambient2', 'assets/sonido/ambiente/cueva.mp3')
+        this.load.audio('ambient3', 'assets/sonido/bajocero.mp3')
     }
-
 
     create() {
         const minuto = 1000 * 60
@@ -56,7 +53,7 @@ export default class mapaScene extends Phaser.Scene {
         ]
         this.tiempoactual = 0
         this.fondoactual = 0
-        this.ambienteactual = 0
+       
         this.sonido = this.sound.add("fxmapsound")
         this.add.image(300, 150, 'boxname').setScale(0.6)
         this.add.image(500, 150, 'boxname2').setScale(0.6)
@@ -71,12 +68,12 @@ export default class mapaScene extends Phaser.Scene {
         buttonmap.setInteractive().on("pointerup", () => {
             this.sonido.play()
             this.fondoactual = (this.fondoactual === 2) ? 0 : this.fondoactual + 1
-            this.ambienteactual = (this.ambienteactual === 2) ? 0 : this.ambienteactual + 1
+           
         })
         buttonmap2.setInteractive().on("pointerup", () => {
             this.sonido.play()
             this.fondoactual = (this.fondoactual === 0) ? 2 : this.fondoactual - 1
-            this.ambienteactual = (this.ambienteactual === 0) ? 2 : this.ambienteactual - 1
+           
         })
         let buttontime = this.add.image(650, 210, 'selec timer').setScale(1)
         buttontime.setInteractive().on("pointerup", () => {

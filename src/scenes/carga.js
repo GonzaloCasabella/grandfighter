@@ -18,7 +18,7 @@ export default class cargaScene extends Phaser.Scene
     preload(){
 
         this.load.spritesheet('loading', 'assets/loadingg.png',{frameWidth:109,frameHeight:107})
-        
+        this.load.image('botonescena', 'assets/texturas/botones/cambioescena.png')
         this.load.audio('backgroundcarga', 'assets/sonido/cinematic pelea3.mp3')
     }
 
@@ -38,6 +38,7 @@ export default class cargaScene extends Phaser.Scene
         let contexto =this
         this.add.image(400, 300, this.fondocarga)
         this.add.image(480, 300, 'loading').setScale(1)
+        const boton = this.add.image(350, 560, 'botonescena').setScale(0.4)
         this.backgroundcarga = this.sound.add('backgroundcarga')
         this.backgroundcarga.play();
         
