@@ -35,6 +35,7 @@ export default class precargagameScene extends Phaser.Scene {
         
         setTimeout(() => {
             this.transicionmusic.play()
+             
             this.scene.start("game",this.data)
         }, 5000);
     }

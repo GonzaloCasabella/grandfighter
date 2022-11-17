@@ -130,7 +130,7 @@ export default class mapaScene extends Phaser.Scene {
              
             var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
             enter.on("up", () => {
-              
+              this.fxambiente.stop()
               this.scene.start("precarga", { fondo: this.fondos[this.fondoactual].texture.key} )
             })
     }
