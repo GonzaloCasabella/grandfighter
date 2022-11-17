@@ -46,7 +46,7 @@ export default class HelloWorldScene extends Phaser.Scene
         boton.setInteractive().on("pointerup", () => {
             this.soundbutton.play()
             this.backgroundMusic.stop()
-            this.scene.start("precarga")
+            this.scene.start("mapa")
         },this)
         
     }

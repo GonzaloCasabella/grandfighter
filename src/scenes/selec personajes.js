@@ -109,7 +109,7 @@ export default class selecpersonajeScene extends Phaser.Scene {
       })
 
     this.add.text
-      (boton6.x - 128, 560, "Seleccionar", {
+      (botont.x - 128, 560, "Seleccionar", {
         fontSize: "15px",
         fontStyle: "bold",
         color: "#fdfceb",
@@ -158,6 +158,7 @@ export default class selecpersonajeScene extends Phaser.Scene {
     var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
     enter.on("up", () => {
       this.fxsound3.play()
+      this.soundtrack2.stop()
       this.scene.start("mapa", { fondo: "fondoingame",music:this.soundtrack2,seleccion:{p1:this.player1,p2:this.player2} })
     })
 

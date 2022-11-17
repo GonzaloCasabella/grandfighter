@@ -24,7 +24,6 @@ export default class gameScene extends Phaser.Scene
         this.load.image('conteo', 'assets/texturas/timer.png')
         this.load.image('contador', 'assets/texturas/contador.png')
         this.load.image('muerte', 'assets/texturas/x.png')
-        this.load.image('powerup', 'assets/texturas/barra power.png')
         this.load.audio('soundgame', 'assets/sonido/cinematic combate1.mp3')
     }
 
@@ -45,14 +44,13 @@ export default class gameScene extends Phaser.Scene
         this.soundgame = this.sound.add('soundgame')
         this.soundgame.play()
 
-        this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
-        .on("up", () => {
+        setTimeout(() => {
             this.soundgame.stop()
-            this.scene.start("creditos")
-        },this)
+            this.scene.start("creditos",this.data)
+        }, 5000);
     
-   
-   
+        
+        
     }
     
 } 

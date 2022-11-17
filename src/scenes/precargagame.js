@@ -18,7 +18,7 @@ export default class precargagameScene extends Phaser.Scene {
 
 
         this.load.image('fondomapanegro', 'assets/mapa/pantallanegra.png')
-        
+        this.load.image('powerup', 'assets/texturas/barrapower.png')
         
     }
 
@@ -29,7 +29,7 @@ export default class precargagameScene extends Phaser.Scene {
         this.add.image(480, 300, 'loading').setScale(1)
         this.transicionmusic = this.sound.add('transicionmusic')
         
-
+       
 
 
         

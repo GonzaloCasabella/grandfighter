@@ -34,9 +34,8 @@ export default class mapaScene extends Phaser.Scene {
         this.load.image('map anterior', 'assets/texturas/botones/izquierda.png')
         this.load.image('box_timer', 'assets/texturas/boxtimer.png')
         this.load.audio('fxmapsound', 'assets/sonido/sonido menu/selemap.mp3')
-        this.load.audio('ambient1', 'assets/sonido/ambiente/epicstorm.mp3')
         this.load.audio('ambient2', 'assets/sonido/ambiente/cueva.mp3')
-        this.load.audio('ambient3', 'assets/sonido/bajocero.mp3')
+        
     }
 
     create() {
@@ -48,11 +47,11 @@ export default class mapaScene extends Phaser.Scene {
         this.fondos = [
             this.add.image(400, 300, 'fondomapa'), this.add.image(400, 300, 'fondomapa2'), this.add.image(400, 300, 'fondomapa3')
         ]
-        this.ambientes = [
-            this.sound.add ('fxmap1'), this.sound.add ('fxmap2'), this.sound.add ('fxmap3')
-        ]
+        
+        
         this.tiempoactual = 0
         this.fondoactual = 0
+
        
         this.sonido = this.sound.add("fxmapsound")
         this.add.image(300, 150, 'boxname').setScale(0.6)
@@ -64,6 +63,8 @@ export default class mapaScene extends Phaser.Scene {
         let buttonplay = this.add.image(445, 560, 'botonjugar').setScale(1)
         let buttonmap = this.add.image(500, 210, 'map siguiente').setScale(1)
         let buttonmap2 = this.add.image(300, 210, 'map anterior').setScale(1)
+        this.fxambiente = this.sound.add("ambient2")
+        this.fxambiente.play()
         
         buttonmap.setInteractive().on("pointerup", () => {
             this.sonido.play()
@@ -127,7 +128,11 @@ export default class mapaScene extends Phaser.Scene {
 
             })
              
-        
+            var enter = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER)
+            enter.on("up", () => {
+              
+              this.scene.start("precarga", { fondo: this.fondos[this.fondoactual].texture.key} )
+            })
     }
 
     update() {

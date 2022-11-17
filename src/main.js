@@ -35,7 +35,7 @@ const config = {
 			debug: false,
 		}
 	},
-	scene: [HelloWorldScene,registroScene, selecidiomaScene,cargaScene,selecpersonajeScene,atributoScene,mapaScene,precargagameScene,gameScene]
+	scene: [HelloWorldScene,registroScene, selecidiomaScene,cargaScene,selecpersonajeScene,creditosScene,atributoScene,mapaScene,precargagameScene,gameScene]
 }
 
 export default new Phaser.Game(config)

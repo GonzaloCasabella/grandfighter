@@ -15,7 +15,7 @@ export default class creditosScene extends Phaser.Scene {
     preload() {
 
         this.load.image('menucreditos', 'assets/mapa/pantallanegra.png')
-        this.load.audio('soundcreditos', 'assets/sonido/sonido menu/finish.mp3')
+        
         this.load.image('botonR', 'assets/texturas/botones/reiniciar.png')
     }
 
@@ -25,11 +25,9 @@ export default class creditosScene extends Phaser.Scene {
 
     create() {
         let contexto = this
-        this.add.image(400, 300, 'menucreditod')
-        this.soundcreditos = this.sound.add('soundcreditos')
+        this.add.image(400, 300, 'menucreditos')
         const botonR = this.add.image(400, 580, 'botonR')
-        this.soundcreditos = this.sound.add('soundcreditos')
-        this.soundcreditos.play();
+        
         this.soundbutton = this.sound.add('soundbutton')
 
         this.tweens.add({
@@ -42,7 +40,7 @@ export default class creditosScene extends Phaser.Scene {
         })
         botonR.setInteractive().on("pointerup", () => {
             this.soundbutton.play();
-            this.soundcreditos.stop();
+        
             this.scene.start("selec personajes")
         },this)
 
